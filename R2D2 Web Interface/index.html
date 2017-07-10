@@ -1,0 +1,808 @@
+<!DOCTYPE HTML>
+<!--
+	Helios by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Helios by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+		<!-- Load c3.css -->
+<link href="C:/html/css/c3.css" rel="stylesheet">
+<link href="C:/html/css/awesomplete.css" rel="stylesheet">
+<link href="C:/html/css/awesomplete.base.css" rel="stylesheet">
+<link href="C:/html/css/awesomplete.theme.css" rel="stylesheet">
+
+
+<!-- Load d3.js and c3.js -->
+<script src="C:/html/scripts/d3.min.js" charset="utf-8"></script>
+<script src="C:/html/scripts/c3.min.js"></script>
+<script src="C:/html/scripts/awesomplete.js"></script>
+<script src="C:/html/scripts/jquery.js"></script>
+	</head>
+	<body class="homepage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Inner -->
+						<div class="inner">
+							<header>
+								<h1><a href="index.html" id="logo">R2D2</a></h1>
+								<img src="images/R2-D2.png" alt="" />
+								<hr />
+								<p>Realtime Data. Realtime Decision.</p>
+							</header>
+							<footer>
+								<a href="#banner" class="button circled scrolly">Analyze</a>
+							
+								<a href="#features" class="button circled scrolly" onclick="rungraph2();">Forecast</a>
+							</footer>
+						</div>
+
+					<!-- Nav -->				</div>
+
+			<!-- Banner -->
+				<section id="banner">
+					<!--<header>
+						
+						
+					</header> -->
+					<p id="stocker">Stock Ticker:&nbsp;&nbsp;&nbsp;&nbsp;<input id="sleepy" name = "stockname" class="awesomplete"
+       data-list="AMZN (Amazon),AAPL (Apple Inc.),TSLA (Tesla Corp.),UBS (UBS AG),GOOGL (Google Inc.)" /></input> &nbsp;&nbsp;&nbsp;&nbsp;<a class="button" onclick="rungraph();">Stream On</a></p>
+	   <br><br><br><br>
+					<h2><strong>Realtime Insights Index</strong></h2>
+					<div id="chart2"></div>
+					
+					<script>
+					var chart2 = c3.generate({
+						data: {
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a1.csv',
+							type: 'line'
+						},
+						bindto: '#chart2',
+						transition: {
+							duration: 1000
+						}
+					});
+					
+				function rungraph(){
+					
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a2.csv'
+						});
+					}, 1000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a3.csv'
+						});
+					}, 2000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a4.csv'
+						});
+					}, 5000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a5.csv'
+						});
+					}, 5500);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a6.csv'
+						});
+					}, 6000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a7.csv'
+						});
+					}, 6250);
+					
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a8.csv'
+						});
+					}, 6500);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a9.csv'
+						});
+					}, 6750);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a10.csv'
+						});
+					}, 7110);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a11.csv'
+						});
+					}, 7650);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a12.csv'
+						});
+					}, 8810);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a13.csv'
+						});
+					}, 8910);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a14.csv'
+						});
+					}, 9018);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a15.csv'
+						});
+					}, 9910);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a16.csv'
+						});
+					}, 10000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a17.csv'
+						});
+					}, 11000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a18.csv'
+						});
+					}, 12000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a19.csv'
+						});
+					}, 12500);
+					
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a20.csv'
+						});
+					}, 13500);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a21.csv'
+						});
+					}, 13750);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a22.csv'
+						});
+					}, 15000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a23.csv'
+						});
+					}, 18000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a24.csv'
+						});
+					}, 20100);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a25.csv'
+						});
+					}, 24000);
+					
+					setTimeout(function () {
+						chart2.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/a26.csv'
+						});
+					}, 28000);
+				
+					
+					/*
+					
+					
+					var chart_don = c3.generate({
+						data: {
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b1.csv',
+							type: 'gauge'
+						},
+						bindto: '#chart_don',
+						transition: {
+							duration: 1000
+						},
+						size: {
+        height: 200
+    },
+						
+    gauge: {
+       
+  width: 250 // for adjusting arc thickness
+    },
+						color: {
+							pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
+							threshold: {
+								values: [30, 60, 90, 100]
+							}
+						}});
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b2.csv'
+						});
+					}, 1000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b3.csv'
+						});
+					}, 2000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b4.csv'
+						});
+					}, 5000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b5.csv'
+						});
+					}, 5500);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b6.csv'
+						});
+					}, 6000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b7.csv'
+						});
+					}, 6250);
+					
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b8.csv'
+						});
+					}, 6500);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b9.csv'
+						});
+					}, 6750);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b10.csv'
+						});
+					}, 7110);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b11.csv'
+						});
+					}, 7650);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b12.csv'
+						});
+					}, 8810);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b13.csv'
+						});
+					}, 8910);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b14.csv'
+						});
+					}, 9018);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b15.csv'
+						});
+					}, 9910);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b16.csv'
+						});
+					}, 10000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b17.csv'
+						});
+					}, 11000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b18.csv'
+						});
+					}, 12000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b19.csv'
+						});
+					}, 12500);
+					
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b20.csv'
+						});
+					}, 13500);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b21.csv'
+						});
+					}, 13750);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b22.csv'
+						});
+					}, 15000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b23.csv'
+						});
+					}, 18000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b24.csv'
+						});
+					}, 20100);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b25.csv'
+						});
+					}, 24000);
+					
+					setTimeout(function () {
+						chart_don.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/b26.csv'
+						});
+					}, 28000);
+					
+					*/
+					
+					
+					
+					var chart_agg = c3.generate({
+						data: {
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c1.csv',
+							type: 'bar'
+						},
+						bindto: '#chart_agg',
+						transition: {
+							duration: 1000
+						},
+						bar: {
+							width: {
+								ratio: 1.5 // this makes bar width 50% of length between ticks
+							}
+							// or
+							//width: 100 // this makes bar width 100px
+						}
+						
+    });
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c2.csv'
+						});
+					}, 1000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c3.csv'
+						});
+					}, 2000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c4.csv'
+						});
+					}, 5000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c5.csv'
+						});
+					}, 5500);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c6.csv'
+						});
+					}, 6000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c7.csv'
+						});
+					}, 6250);
+					
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c8.csv'
+						});
+					}, 6500);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c9.csv'
+						});
+					}, 6750);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c10.csv'
+						});
+					}, 7110);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c11.csv'
+						});
+					}, 7650);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c12.csv'
+						});
+					}, 8810);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c13.csv'
+						});
+					}, 8910);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c14.csv'
+						});
+					}, 9018);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c15.csv'
+						});
+					}, 9910);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c16.csv'
+						});
+					}, 10000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c17.csv'
+						});
+					}, 11000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c18.csv'
+						});
+					}, 12000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c19.csv'
+						});
+					}, 12500);
+					
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c20.csv'
+						});
+					}, 13500);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c21.csv'
+						});
+					}, 13750);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c22.csv'
+						});
+					}, 15000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c23.csv'
+						});
+					}, 18000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c24.csv'
+						});
+					}, 20100);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c25.csv'
+						});
+					}, 24000);
+					
+					setTimeout(function () {
+						chart_agg.load({
+							url: 'http://s3.amazonaws.com/ubshackathon2017/AAPL/c26.csv'
+						});
+					}, 28000);
+				
+					
+					}
+					
+					
+					
+					</script>
+					
+					<div id="chart_don"></div>
+					<br><br>
+					<div id="chart_agg"></div>
+					
+				</section>
+<br><br><br><br><br><br><br><br><br><br>
+						
+			<!-- Features -->
+				<div class="wrapper style1">
+
+					<section id="features" class="container special">
+						<header>
+							<h2>Trending Now on R2D2's Radar:</h2>
+							
+						</header>
+						<div class="row">
+							<article class="4u 12u(mobile) special">
+								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
+								<header>
+									<h3><a href="#">AMZN</a></h3>
+								</header>
+
+							</article>
+							<article class="4u 12u(mobile) special" id="clickimg">
+								<a class="image featured" ><img src="images/pic08.jpg" alt="" class="smallimg"/></a>
+								<header>
+									<h3><a> AAPL</a></h3>
+								</header>
+								
+							</article>
+							<article class="4u 12u(mobile) special">
+								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" class="smallimg"/></a>
+								<header>
+									<h3><a href="#">TSLA</a></h3>
+								</header>
+								
+							</article>
+						</div>
+						
+						<div id="chart1"></div>
+						<img src="images/pred.png" id="aapl_stock" />
+						
+						
+						
+						<script>
+						
+						$('#aapl_stock').hide();
+						
+						$("#clickimg").click(function(){
+							$("#aapl_stock").show();
+						});
+						
+						$("#aapl_stock").click(function(){
+							$('#aapl_stock').hide();
+						});
+						
+						function rungraph2(){
+							var chart1 = c3.generate({
+								data: {
+									columns: [
+										['data', 91.4]
+									],
+									type: 'gauge'
+									
+								},
+								gauge: {
+							//        label: {
+							//            format: function(value, ratio) {
+							//                return value;
+							//            },
+							//            show: false // to turn off the min/max labels.
+							//        },
+							//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+							//    max: 100, // 100 is default
+							//    units: ' %',
+							//    width: 39 // for adjusting arc thickness
+								},
+								bindto: '#chart1',
+								color: {
+									pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
+									threshold: {
+							//            unit: 'value', // percentage is default
+							//            max: 200, // 100 is default
+										values: [30, 60, 90, 100]
+									}
+								},
+								size: {
+									height: 180
+								}
+							});
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 94]]
+								});
+							}, 1000);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 86]]
+								});
+							}, 1600);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 91]]
+								});
+							}, 3800);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 92.5]]
+								});
+							}, 4900);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 93]]
+								});
+							}, 5800);
+							
+							
+							
+							
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 94]]
+								});
+							}, 7200);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 94]]
+								});
+							}, 8755);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 91]]
+								});
+							}, 9899);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 92.5]]
+								});
+							}, 10566);
+
+							setTimeout(function () {
+								chart1.load({
+									columns: [['data', 96]]
+								});
+							}, 11988);
+						}
+						
+				
+					
+					
+					
+					</script>
+						
+						
+					</section>
+
+				</div>
+
+			<!-- Footer -->
+				<div id="footer">
+					<div class="container">
+						<div class="row">
+
+							
+											<a href="#"><span class="label"><img src="images/AWS.png" class="myimg"/></span></a>
+											<a href="#"><span class="label"><img src="images/d3.png" class="myimg"/></span></a>
+											<a href="#"><span class="label"><img src="images/python.png" class="myimg"/></span></a>
+											<a href="#"><span class="label"><img src="images/spark.png" class="myimg"/></span></a>
+											<a href="#"><span class="label"><img src="images/ts.png" class="myimg"/></span></a>
+
+											
+
+
+						</div>
+						<hr />
+						<div class="row">
+							<div class="12u">
+
+								<!-- Contact -->
+									<section class="contact">
+										<header>
+											<h3>All Rights Reserved. UBS Hackathon 2017</h3>
+										</header>
+										
+									</section>
+
+								
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.onvisible.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
