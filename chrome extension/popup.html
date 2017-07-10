@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Rate this Article's Sentiment</title>
+    <style>
+      body {
+        font-family: "Frutiger";
+        font-size: 125%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        width: 300px;
+      }
+	  #r2d2 {
+		color: white;
+		background-color: gray;
+		font-weight: bold;
+		font-family: "Frutiger";
+		border-style: solid;
+		bordeR: 0px;
+	  }
+	  #rate {
+		color: white;
+		background-color: red;
+		border-color: red;
+		font-weight: bold;
+		font-family: "Frutiger";
+		border-style: solid;
+		border: 0px;
+	  }
+	  #sentiment {
+		background-color: black;
+	  }
+    </style>
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="status"></div>
+	<button id="r2d2"> R2D2 </button>
+	<button id="rate"> RATE </button>
+	<input type="range" id="sentiment" value="5" min="1" max="10">
+	<label id="value"> 5</label>
+    <img id="image-result" hidden>
+  </body>
+</html>
+
