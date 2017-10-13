@@ -5,6 +5,4 @@ Components of completed project, following a 24 hour hackathon on June 22nd, 201
 
 Summary
 ------
-
-Test Suite Execution
-------
+Using machine learning algorithms on sentimental analyses of RSS feeds, recent article publications, metrics from Bloomberg, and other sources, the web app delivers real time analyses and suggestions to financial analysts. 
